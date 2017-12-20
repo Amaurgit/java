@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
-	// test
+
 	private int codeClient;
 	private String nomClient;
 	private String prenomClient;
