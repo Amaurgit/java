@@ -69,30 +69,36 @@ public class Rallye {
 		for (int i = 0; i < speciales.size(); i++) {
 			for (int j = 0; j < speciales.get(i).getClassement().length; j++) {
 				if (speciales.get(i).getClassement()[j].getEquipage().getDossard() == 1) {
-					Calendar dateToAdd1 = Calendar.getInstance();
-					dateToAdd1.setTime(speciales.get(i).getClassement()[j].getTemps());
+					Calendar dateToAdd1 = new GregorianCalendar();
+					//dateToAdd1.setTime(speciales.get(i).getClassement()[j].getTemps());
 
 					cal1.add(Calendar.HOUR, dateToAdd1.get(Calendar.HOUR));
 					cal1.add(Calendar.MINUTE, dateToAdd1.get(Calendar.MINUTE));
 					cal1.add(Calendar.SECOND, dateToAdd1.get(Calendar.SECOND));
+					System.out.println("heure:" + dateToAdd1.get(Calendar.HOUR) + " minutes:"
+							+ dateToAdd1.get(Calendar.MINUTE) + " secondes: " + dateToAdd1.get(Calendar.SECOND));
+
+					// System.out.println("temps dossard 1 : " + cal1.getTime());
 
 				}
 				if (speciales.get(i).getClassement()[j].getEquipage().getDossard() == 2) {
-					Calendar dateToAdd2 = Calendar.getInstance();
+					Calendar dateToAdd2 = new GregorianCalendar();
 					dateToAdd2.setTime(speciales.get(i).getClassement()[j].getTemps());
 
 					cal2.add(Calendar.HOUR, dateToAdd2.get(Calendar.HOUR));
 					cal2.add(Calendar.MINUTE, dateToAdd2.get(Calendar.MINUTE));
 					cal2.add(Calendar.SECOND, dateToAdd2.get(Calendar.SECOND));
+					// System.out.println("temps dossard 2 : " + cal2.getTime());
 
 				}
 				if (speciales.get(i).getClassement()[j].getEquipage().getDossard() == 3) {
-					Calendar dateToAdd3 = Calendar.getInstance();
+					Calendar dateToAdd3 = new GregorianCalendar();
 					dateToAdd3.setTime(speciales.get(i).getClassement()[j].getTemps());
 
 					cal3.add(Calendar.HOUR, dateToAdd3.get(Calendar.HOUR));
 					cal3.add(Calendar.MINUTE, dateToAdd3.get(Calendar.MINUTE));
 					cal3.add(Calendar.SECOND, dateToAdd3.get(Calendar.SECOND));
+					// System.out.println("temps dossard 3 : " + cal3.getTime());
 
 				}
 				indexClassement++;
